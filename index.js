@@ -72,7 +72,7 @@ function returnAletterArray(array) {
     var wordA = [];
     for (var i = 0; i < array.length; i++) {
         var word = array[i];
-        if (word.startsWith("a")) {
+        if (word.toLowerCase().startsWith("a")) {
             wordA.push(word);
         }
     }
@@ -80,3 +80,34 @@ function returnAletterArray(array) {
 }
 var result = returnAletterArray(wordsArr);
 console.log(result); // Output: ["apple", "apricot"]
+// question 12
+var fruits = ["apple", "anar", "peach", "mango", "apple"];
+for (var i = 0; i < fruits.length; i++) {
+    if (i > 0) {
+        console.log(fruits[i]);
+    }
+}
+//  question 13
+var normalNum = [1, 2, 3, 4, 4, 45, 5, 7, 8, 9];
+function getSquareNumber(normal) {
+    for (var i = 0; i < normal.length; i++) {
+        normal[i] = normal[i] * normal[i];
+    }
+    return normal;
+}
+console.log(getSquareNumber(normalNum));
+//  question 14
+function reverseArray(num) {
+    var last = num.length - 1;
+    var start = 0;
+    var swap;
+    while (start < last) {
+        swap = num[start];
+        num[start] = num[last];
+        num[last] = swap;
+        start++;
+        last--;
+    }
+    return num;
+}
+console.log(reverseArray(normalNum));

@@ -100,7 +100,7 @@ console.log("highest temprature is: " , highestTemp);
 
 let array:number[]=[1,-2,-2,4,5]; // array to give to function
 
-function countPositiveNumber(arr:number[]) // function for calculating the positive num
+function countPositiveNumber(arr:number[]):number // function for calculating the positive num
 {
     let positiveElement:number=0;
 
@@ -122,13 +122,14 @@ countPositiveNumber(array); // calling the function
 
 let wordsArr: string[] = ["apple", "banana", "apricot"];
 
-function returnAletterArray(array: string[]): string[] {
+function returnAletterArray(array: string[]): string[] 
+{
     let wordA: string[] = [];
 
     for (let i = 0; i < array.length; i++) {
         let word = array[i];
 
-        if (word.startsWith("a")) {
+        if (word.toLowerCase().startsWith("a")) {
             wordA.push(word);
         }
     }
@@ -138,6 +139,73 @@ function returnAletterArray(array: string[]): string[] {
 
 const result = returnAletterArray(wordsArr);
 console.log(result); // Output: ["apple", "apricot"]
+
+
+
+// question 12
+
+let fruits:string[]=["apple", "anar", "peach", "mango", "apple"];
+
+for(let i = 0; i<fruits.length; i++)
+{
+    if(i>0){
+        console.log(fruits[i]);
+    }
+}
+
+
+
+//  question 13
+
+let normalNum:number[]=[1,2,3,4,4,45,5,7,8,9];
+
+function getSquareNumber(normal:number[]):number[]
+{
+    for(let i=0; i<normal.length; i++)
+    {
+        normal[i]=normal[i]*normal[i];
+    }
+
+    return normal;
+}
+
+console.log(getSquareNumber(normalNum));
+
+
+
+//  question 14
+
+
+
+function reverseArray(num:number[]):number[]
+{
+    let last=num.length-1;
+    let start=0;
+    let swap;
+
+    while(start<last)
+    {
+        swap=num[start];
+        num[start]=num[last];
+        num[last]=swap;
+
+        start++;
+        last--
+    }
+
+
+    return num;
+}
+
+console.log(reverseArray(normalNum));
+
+
+
+//  question 15
+
+
+
+
 
 
 
